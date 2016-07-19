@@ -1,6 +1,5 @@
 punycode = require('punycode')
-chalk = require('chalk')
-_ = require('lodash')
+stripAnsi = require('strip-ansi')
 
 # From https://github.com/mathiasbynens/esrever/blob/master/scripts/export-data.js
 
@@ -11,11 +10,11 @@ exports.get = (input) ->
 	if not input?
 		throw new Error('Missing input')
 
-	if not _.isString(input)
+	if typeof input != 'string'
 		throw new Error("Invalid input: #{input}")
 
 	# Also strip colour escape sequences
-	input = chalk.stripColor(input)
+	input = stripAnsi(input)
 
 	# Remove any combining marks, leaving only the symbols they belong to:
 	stripped = input.replace REGEX_SYMBOLS, ($0, symbol, combiningMarks) ->
