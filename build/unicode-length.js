@@ -1,8 +1,8 @@
-var REGEX_SYMBOLS, chalk, punycode, _;
+var REGEX_SYMBOLS, punycode, stripAnsi, _;
 
 punycode = require('punycode');
 
-chalk = require('chalk');
+stripAnsi = require('strip-ansi');
 
 _ = require('lodash');
 
@@ -16,7 +16,7 @@ exports.get = function(input) {
   if (!_.isString(input)) {
     throw new Error("Invalid input: " + input);
   }
-  input = chalk.stripColor(input);
+  input = stripAnsi(input);
   stripped = input.replace(REGEX_SYMBOLS, function($0, symbol, combiningMarks) {
     return symbol;
   });
