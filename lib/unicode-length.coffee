@@ -1,6 +1,5 @@
 punycode = require('punycode')
 stripAnsi = require('strip-ansi')
-_ = require('lodash')
 
 # From https://github.com/mathiasbynens/esrever/blob/master/scripts/export-data.js
 
@@ -11,7 +10,7 @@ exports.get = (input) ->
 	if not input?
 		throw new Error('Missing input')
 
-	if not _.isString(input)
+	if typeof input != 'string'
 		throw new Error("Invalid input: #{input}")
 
 	# Also strip colour escape sequences
