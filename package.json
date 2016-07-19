@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Get the length of unicode strings",
   "main": "build/unicode-length.js",
+  "files": [
+    "build/unicode-length.js"
+  ],
   "homepage": "https://github.com/jviotti/unicode-length",
   "repository": {
     "type": "git",
