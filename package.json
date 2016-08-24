@@ -1,6 +1,6 @@
 {
   "name": "unicode-length",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get the length of unicode strings",
   "main": "build/unicode-length.js",
   "files": [
