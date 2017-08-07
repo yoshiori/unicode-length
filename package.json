@@ -1,6 +1,6 @@
 {
   "name": "unicode-length",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Get the length of unicode strings",
   "main": "build/unicode-length.js",
   "files": [
@@ -23,7 +23,7 @@
     "test": "gulp test",
     "prepublish": "gulp build"
   },
-  "author": "Juan Cruz Viotti <juanchiviotti@gmail.com>",
+  "author": "Juan Cruz Viotti <jv@jviotti.com>",
   "license": "MIT",
   "devDependencies": {
     "chai": "~1.10.0",
